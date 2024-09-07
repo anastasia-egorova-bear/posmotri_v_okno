@@ -13,9 +13,10 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  position: relative;
 }
 
 h1,
@@ -35,4 +36,279 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+fieldset {
+  border: 0;
+}
+.content {
+  margin: 133px 30px;
+  display: grid;
+  grid-template-columns: 711px 399px;
+  /*align-items: end;*/
+  gap: 30px;
+  justify-content: center;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 78px;
+}
+
+.result__video-container {
+  height: 386px;
+  position: relative;
+}
+
+.result__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.search-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 40px;
+  align-items: end;
+}
+
+.search-form__fieldset {
+  appearance: none;
+  background: transparent;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  /*color: rgba(255, 255, 255, 0.7);*/
+  /*width: 100%;*/
+}
+.search-form__label-text{
+  /*width: 100%;*/
+  font-family: inherit;
+  font-size:inherit;
+  padding-left: 5px;
+}
+.search-form__fieldset-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.search-form__checkbox-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+ /* 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;*/
+
+  
+
+   /*создана специально для того, 
+  чтобы выстроить чекбоксы в линию.*/
+}
+.search-form__pseudo-checkbox {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  width: 19px;
+  height: 19px;
+  border: 1px solid #fff;
+}
+
+.search-form__pseudo-checkbox:disabled {
+  top: 0px;
+  left: 0px;
+  display: flex;
+  width: 19px;
+  height: 19px;
+  padding: 3px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fff;
+}
+/* выключённый */
+/*.search-form__pseudo-checkbox:checked {
+  height: 19px;
+  width: 19px;
+  outline: 1px solid #fff;
+}/* выбранный */
+/*.search-form__pseudo-checkbox:focus-visible {
+  height: 19px;
+  width: 19px;
+  outline: 1px solid #fff;
+} /* в фокусе */ 
+
+.search-form__pseudo-checkbox:has(:focus-visible) {
+
+}
+
+input[type='checkbox']:checked +.search-form__pseudo-checkbox {
+  box-sizing: border-box;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+}
+
+.search-form__label {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  /*overflow: visible;*/
+  
+}
+
+.search-form__label-text:has(:focus-visible) {
+  outline: 1px solid #fff;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.search-form__textfield {
+  border-width: 1px;
+  border-style: solid none;
+  border-color: #fff;
+  /*margin-right: 14px;*/
+  color: rgba(255, 255, 255, 0.7);
+  background: transparent;
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+}
+
+.button {
+  background: transparent;
+  border: 1px solid #fff;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #fff;
+  padding: 6px 0;
+}
+
+.search-form__label-text:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.search-form__submit-button:hover {
+  text-decoration: underline;
+}
+/*
+.search-form__textfield::before:hover {
+  cursor:text;
+  text-decoration: none;
+}*/
+
+
+.search-form__submit-button:active {
+  background: #545050;
+  text-decoration: none;
+}
+
+.more-button {
+  width: 100%;
+}
+
+.content__list {
+  max-height: 298px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  position: relative;
+}
+
+.content__list::-webkit-scrollbar {
+  display: none;
+}
+
+.content__list-item {
+  display: flex;
+  flex-direction: column;
+}
+.content__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.title {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 70px;
+  text-transform: uppercase;
+  color: #fff;
+ /* margin-bottom: 26px;*/
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__card-link {
+  text-decoration: none;
+  margin: 2px;
+  display: block;
+  /* и заменить цвет текста у ссылки*/
+}
+.content__video-card {
+  display: flex;
+  justify-content: space-between;
+}
+.content__video-card-description-container {
+  /*Сделать так, чтобы .content__video-card-description-container 
+  занимал всё доступное пространство, не занятое картинкой.*/
+}
+
+.content__video-card-title {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.content__video-card-description {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 16px;
+  color: #fff;
+  /*необходимо как-то вписать другой текст Вот, что видит кто-то из команды Практикума, когда не смотрит на код,
+а смотрит в окно. */
+}
+
+.content__video-card-thumbnail {
+  object-fit: cover;
+  object-position: right;
+  width: 194px;
+  height: 103px;
 }
