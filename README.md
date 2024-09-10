@@ -1,1 +1,1 @@
-git@github.com:anastasia-egorova-bear/posmotri_v_okno.git
+https://github.com/anastasia-egorova-bear/posmotri_v_okno.git
