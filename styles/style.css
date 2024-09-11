@@ -97,10 +97,11 @@ fieldset {
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
-  line-height: 22px;
+  line-height: 1.2;
   background: transparent;
   appearance: none;
 }
+
 .search-form__label-text {
   font-family: inherit;
   font-size: inherit;
@@ -127,15 +128,6 @@ fieldset {
 }
 
 .search-form__pseudo-checkbox {
-  position: relative;
-  display: flex;
-  width: 19px;
-  height: 19px;
-  border: 1px solid #fff;
-  cursor: pointer;
-}
-
-.search-form__pseudo-checkbox {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -143,10 +135,9 @@ fieldset {
   height: 19px;
   margin-right: 5px;
   border: 1px solid #fff;
-  padding: 1px;
 }
 
-.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+.search-form__checkbox:checked+.search-form__pseudo-checkbox::after {
   content: "";
   display: block;
   width: 15px;
@@ -187,6 +178,7 @@ fieldset {
 .search-form__textfield:hover {
   cursor: text;
 }
+
 .search-form__textfield:focus-visible {
   outline: none;
 }
@@ -207,6 +199,7 @@ fieldset {
   border: 1px solid #fff;
   padding: 5px 0;
   color: #fff;
+  font-family: inherit;
   font-weight: 700;
   font-size: 18px;
   font-style: normal;
@@ -244,7 +237,7 @@ fieldset {
   position: relative;
   display: flex;
   flex-direction: column;
-  max-height: 298px;
+  height: 298px;
   overflow: auto;
 }
 
@@ -273,11 +266,11 @@ fieldset {
 .title {
   margin-bottom: 26px;
   color: #fff;
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 75px;
   font-style: normal;
-  line-height: 70px;
+  line-height: 0.94;
   text-transform: uppercase;
 }
 
@@ -312,13 +305,16 @@ fieldset {
 
 .content__video-card-title {
   margin-bottom: 6px;
+  overflow: hidden;
   color: #fff;
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 30px;
   font-style: normal;
-  line-height: 30px;
+  line-height: 1;
   text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .content__video-card-description {
@@ -326,7 +322,7 @@ fieldset {
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
-  line-height: 16px;
+  line-height: 0.9;
 }
 
 .content__video-card-thumbnail {
@@ -339,4 +335,9 @@ fieldset {
 .content__card-link_current {
   padding: 2px 0 2px 2px;
   background-color: #545050;
+}
+
+.content__video-card-description-container {
+  flex-grow: 1;
+  overflow: hidden;
 }
